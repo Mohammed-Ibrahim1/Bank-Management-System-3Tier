@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Bank_Project_BusinessLayer/Bank_Project_BusinessLayer.csproj" Id="5bc104cd-ec47-4d7a-93f7-6f0aa25f86fd" />
+  <Project Path="Bank_Project_DataAccessLayer/Bank_Project_DataAccessLayer.csproj" Id="c3444f9e-b8ca-4e1d-bf7b-9cc47feb2235" />
+  <Project Path="Bank_Project_using_3Tierarchitecture.csproj" Id="62398b59-d50f-40a9-b029-d52f32ce53d9" />
+</Solution>
