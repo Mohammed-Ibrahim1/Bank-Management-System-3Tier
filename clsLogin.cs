@@ -25,7 +25,7 @@ namespace ConsolePresentationLayer
             Username =  Console.ReadLine();
                 Console.Write("Password  :  ");
             Password = Console.ReadLine();
-            clsUsersOperations CurrentUser = clsUsersOperations.TryLogin(Username, Password);
+            clsUsersOperations CurrentUser = clsUsersOperations.TryLogin(Username,true , Password);
             clsMainScreen.CheckForErrors();
             if (CurrentUser != null)
             {

@@ -95,10 +95,10 @@ namespace BankSystemBusinessLayer
             this.Password = password;
             Mode = enMode.Update;
         }
-        public static clsUsersOperations TryLogin(string username, string password ="")
+        public static clsUsersOperations TryLogin(string username,bool LoginIndicator ,string password ="")
         {
             clsAccesstoUsersData.stUserData UserData = new clsAccesstoUsersData.stUserData();
-            if (clsAccesstoUsersData.CheckingLoginINDetails(username,  ref UserData , _Encription(password, 2)))
+            if (clsAccesstoUsersData.CheckingLoginINDetails(username,  ref UserData ,LoginIndicator , _Encription(password, 2)))
             {
                 return new clsUsersOperations(UserData.UserID, UserData.FirstName, UserData.LastName, UserData.Email, UserData.Phone
                     , UserData.UserName,_Decription( UserData.Password ,2), UserData.Accessibilities);
