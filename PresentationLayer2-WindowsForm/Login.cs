@@ -16,8 +16,9 @@ namespace PresentationLayer2_WindowsForm
     {
         public static clsUsersOperations _CurrentUser = null;
 
-        public Login()
+        public Login() 
         {
+
             InitializeComponent();
             Header.Text = "Logging IN";
             _CurrentUser = null;

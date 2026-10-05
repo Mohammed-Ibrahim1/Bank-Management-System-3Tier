@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace PresentationLayer2_WindowsForm
     {
         public BaseForm()
         {
+            
             InitializeComponent();
             if (Login._CurrentUser != null)
             {
@@ -27,10 +29,7 @@ namespace PresentationLayer2_WindowsForm
             Ldateandtime.Text = DateTime.Now.ToString("dddd/M/yyyy HH:mm:ss");
         }
 
-        public static void Refresh()
-        {
-            
-        }
+      
         private void P1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -44,7 +43,7 @@ namespace PresentationLayer2_WindowsForm
         private void timer1_Tick(object sender, EventArgs e)
         {
             Ldateandtime.Text = DateTime.Now.ToString("dddd/M/yyyy HH:mm:ss");
-
+            
         }
 
         private void BaseForm_Load(object sender, EventArgs e)

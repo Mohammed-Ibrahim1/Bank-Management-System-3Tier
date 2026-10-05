@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNew_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNew_Update.Designer.cs">
+      <DependentUpon>AddNew_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClient.Designer.cs">
+      <DependentUpon>ListClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -66,8 +80,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerchingForCLientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerchingForCLientForm.Designer.cs">
+      <DependentUpon>SerchingForCLientForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNew_Update.resx">
+      <DependentUpon>AddNew_Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClient.resx">
+      <DependentUpon>ListClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -84,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SerchingForCLientForm.resx">
+      <DependentUpon>SerchingForCLientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
