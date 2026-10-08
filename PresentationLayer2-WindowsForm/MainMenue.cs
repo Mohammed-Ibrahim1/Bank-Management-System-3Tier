@@ -110,7 +110,8 @@ namespace PresentationLayer2_WindowsForm
 
         private void bListClient_Click(object sender, EventArgs e)
         {
-            Form F1 = new ListClient();
+            DataTable DT =clsClientsOperations.GetClientList();
+            Form F1 = new ListClient(DT);
             F1.ShowDialog();
 
         }
@@ -139,6 +140,12 @@ namespace PresentationLayer2_WindowsForm
         {
             Mode = enMode.Delete;
             ShowForms(Mode);
+        }
+
+        private void BTransactions_Click(object sender, EventArgs e)
+        {
+            Form F1   = new TransactionsForm();
+            F1.ShowDialog();
         }
     }
 }

@@ -162,6 +162,7 @@
             this.BTransactions.Tag = "32";
             this.BTransactions.Text = "Transaction";
             this.BTransactions.UseVisualStyleBackColor = true;
+            this.BTransactions.Click += new System.EventHandler(this.BTransactions_Click);
             // 
             // bListClient
             // 
@@ -179,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1909, 831);
+            this.ClientSize = new System.Drawing.Size(2051, 831);
             this.Controls.Add(this.panel1);
             this.Name = "MainMenue";
             this.Text = "MainMenue";

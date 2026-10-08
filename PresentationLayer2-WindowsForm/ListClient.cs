@@ -13,8 +13,10 @@ namespace PresentationLayer2_WindowsForm
 {
     public partial class ListClient : BaseForm
     {
-        public ListClient() 
+        DataTable CurrentDataTable = null;
+        public ListClient(DataTable DT) 
         {
+            CurrentDataTable = DT;
             LCurrentuser.Text = Login._CurrentUser.UserName;
             Header.Text = "List Clients";
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace PresentationLayer2_WindowsForm
 
         private void ListClient_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = clsClientsOperations.GetClientList();
+            dataGridView1.DataSource = CurrentDataTable;
 
         }
 

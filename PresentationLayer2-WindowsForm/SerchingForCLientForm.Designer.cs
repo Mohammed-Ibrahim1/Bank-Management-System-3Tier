@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Lextra = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -50,9 +54,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(516, 32);
+            this.label1.Size = new System.Drawing.Size(490, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Please Enter Accout Number to Search :\r\n";
+            this.label1.Text = "Please Enter Accout Name to Search :\r\n";
             // 
             // textBox1
             // 
@@ -62,18 +66,35 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(438, 79);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
+            // 
+            // Lextra
+            // 
+            this.Lextra.AutoSize = true;
+            this.Lextra.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lextra.Location = new System.Drawing.Point(197, 126);
+            this.Lextra.Name = "Lextra";
+            this.Lextra.Size = new System.Drawing.Size(0, 51);
+            this.Lextra.TabIndex = 2;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // SerchingForCLientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 617);
+            this.Controls.Add(this.Lextra);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "SerchingForCLientForm";
             this.Text = "SerchingForCLientForm";
             this.Load += new System.EventHandler(this.SerchingForCLientForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +105,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label Lextra;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -86,6 +86,18 @@
     <Compile Include="SerchingForCLientForm.Designer.cs">
       <DependentUpon>SerchingForCLientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransactionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionsForm.Designer.cs">
+      <DependentUpon>TransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNew_Update.resx">
       <DependentUpon>AddNew_Update.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +124,12 @@
     </Compile>
     <EmbeddedResource Include="SerchingForCLientForm.resx">
       <DependentUpon>SerchingForCLientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionsForm.resx">
+      <DependentUpon>TransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

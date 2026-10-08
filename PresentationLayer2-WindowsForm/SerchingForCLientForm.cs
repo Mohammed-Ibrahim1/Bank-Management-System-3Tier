@@ -13,15 +13,21 @@ namespace PresentationLayer2_WindowsForm
 {
     public  partial class SerchingForCLientForm : Form
     {
-        public SerchingForCLientForm()
+        public SerchingForCLientForm(string Extramessage = "")
         {
             InitializeComponent();
+            if (!string.IsNullOrEmpty(Extramessage)) {   
+            
+           Lextra.Text = "(" + Extramessage + ")";
+
+            }
+
         }
 
         public static clsClientsOperations CurrentClient = null;
         private void SerchingForCLientForm_Load(object sender, EventArgs e)
         {
-
+            CurrentClient = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,6 +42,21 @@ namespace PresentationLayer2_WindowsForm
             else {
                 this.Close();
                     }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text)) { 
+            e.Cancel = true;
+                textBox1.Focus();
+                errorProvider1.SetError(textBox1, "Can NOT search for a NULL value");
+
+            }
         }
     }
 }
