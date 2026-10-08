@@ -83,6 +83,7 @@ namespace PresentationLayer2_WindowsForm
                 if (Counter == 3)
                 { MessageBox.Show("System is Locked", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     this.Close();
+                    Application.Exit();
                 }
                 Counter++;
                 MessageBox.Show($"Wrong Password  /  User Name Try again  ({3 - Counter + 1 } Trial(s) Left ).", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
