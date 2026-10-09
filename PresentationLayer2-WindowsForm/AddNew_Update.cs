@@ -190,5 +190,13 @@ namespace PresentationLayer2_WindowsForm
 
 
         }
+
+        private void Lmessage_Click(object sender, EventArgs e)
+        {
+            DataTable DT  = new DataTable();
+            DT = clsUsersOperations.GetLogs();
+            Form F1 = new ListClient(DT , "Login Logs");
+            F1.ShowDialog();
+        }
     }
 }

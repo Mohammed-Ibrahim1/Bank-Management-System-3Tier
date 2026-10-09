@@ -67,7 +67,7 @@ namespace PresentationLayer2_WindowsForm
         private void Blog_Click(object sender, EventArgs e)
         {
             DataTable DT = clsClientsOperations.GetLogs ();
-            Form F1 = new ListClient(DT);
+            Form F1 = new ListClient(DT , "Transfer Log");
             F1.ShowDialog();
         }
 

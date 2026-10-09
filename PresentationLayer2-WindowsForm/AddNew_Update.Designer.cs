@@ -237,6 +237,7 @@
             this.Lmessage.TabIndex = 13;
             this.Lmessage.Text = "You are on ReadOnly Mode Tab here to switch to Edit mode";
             this.Lmessage.Visible = false;
+            this.Lmessage.Click += new System.EventHandler(this.Lmessage_Click);
             // 
             // linkLabel1
             // 

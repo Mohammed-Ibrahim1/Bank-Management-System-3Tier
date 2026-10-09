@@ -92,6 +92,7 @@
             this.BLogs.Tag = "128";
             this.BLogs.Text = "Login Logs";
             this.BLogs.UseVisualStyleBackColor = true;
+            this.BLogs.Click += new System.EventHandler(this.BLogs_Click);
             // 
             // Bmanange
             // 
@@ -103,6 +104,7 @@
             this.Bmanange.Tag = "64";
             this.Bmanange.Text = "Manage User";
             this.Bmanange.UseVisualStyleBackColor = true;
+            this.Bmanange.Click += new System.EventHandler(this.Bmanange_Click);
             // 
             // BFind
             // 

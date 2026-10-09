@@ -14,11 +14,11 @@ namespace PresentationLayer2_WindowsForm
     public partial class ListClient : BaseForm
     {
         DataTable CurrentDataTable = null;
-        public ListClient(DataTable DT) 
+        public ListClient(DataTable DT ,  string Message) 
         {
             CurrentDataTable = DT;
             LCurrentuser.Text = Login._CurrentUser.UserName;
-            Header.Text = "List Clients";
+            Header.Text = Message;
             InitializeComponent();
         }
 

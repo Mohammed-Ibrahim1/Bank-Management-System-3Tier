@@ -139,7 +139,7 @@ namespace BankSystemBusinessLayer
 
         bool _UpdateUser ()
         {
-            return clsAccesstoUsersData.UpdateUser(UserName, Password, FirstName, LastName, Email, Phone, Accessibilities);
+            return clsAccesstoUsersData.UpdateUser(UserName, _Encription(Password, 2), FirstName, LastName, Email, Phone, Accessibilities);
         }
         public bool Save ()
         {

@@ -17,12 +17,10 @@ namespace PresentationLayer2_WindowsForm
         public enum enMode {Addnew  =1  , Update =2, Delete = 3 ,  Find =4 ,}
         enMode Mode = enMode.Update;
         public clsUsersOperations _CurrentUser = Login._CurrentUser;
-        public MainMenue() 
-        {
-           
-            InitializeComponent();
 
-            Header.Text = "Main Menue";
+        
+       public  void CheckPermissions ()
+        { 
             if (_CurrentUser.Accessibilities != -1)
             {
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(bListClient.Tag.ToString())) != Convert.ToInt32(bListClient.Tag.ToString()))
@@ -31,42 +29,52 @@ namespace PresentationLayer2_WindowsForm
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(BAddnew.Tag.ToString())) != Convert.ToInt32(BAddnew.Tag.ToString()))
                 {
-                   BAddnew.Enabled = false;
+                    BAddnew.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(Bdelete.Tag.ToString())) != Convert.ToInt32(Bdelete.Tag.ToString()))
                 {
-                   Bdelete.Enabled = false;
+                    Bdelete.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(BUpdate.Tag.ToString())) != Convert.ToInt32(BUpdate.Tag.ToString()))
                 {
-                   BUpdate.Enabled = false;
+                    BUpdate.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(BFind.Tag.ToString())) != Convert.ToInt32(BFind.Tag.ToString()))
                 {
-                   BFind.Enabled = false;
+                    BFind.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(BTransactions.Tag.ToString())) != Convert.ToInt32(BTransactions.Tag.ToString()))
                 {
-                   BTransactions.Enabled = false;
+                    BTransactions.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(Bmanange.Tag.ToString())) != Convert.ToInt32(Bmanange.Tag.ToString()))
                 {
-                   Bmanange.Enabled = false;
+                    Bmanange.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(BLogs.Tag.ToString())) != Convert.ToInt32(BLogs.Tag.ToString()))
                 {
-                   BLogs.Enabled = false;
+                    BLogs.Enabled = false;
                 }
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(Bcurrencies.Tag.ToString())) != Convert.ToInt32(Bcurrencies.Tag.ToString()))
                 {
-                   Bcurrencies.Enabled = false;
+                    Bcurrencies.Enabled = false;
                 }
+            }
+
+            }
+        public MainMenue() 
+        {
+           
+            InitializeComponent();
+
+            Header.Text = "Main Menue";
+           CheckPermissions();
 
 
 
             }
 
-        }
+        
 
         void ShowForms (enMode Mode)
         {
@@ -87,7 +95,10 @@ namespace PresentationLayer2_WindowsForm
 
 
         }
-        
+        public  void Refreshform ()
+        { 
+           CheckPermissions();
+        }
      
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,7 +122,7 @@ namespace PresentationLayer2_WindowsForm
         private void bListClient_Click(object sender, EventArgs e)
         {
             DataTable DT =clsClientsOperations.GetClientList();
-            Form F1 = new ListClient(DT);
+            Form F1 = new ListClient(DT ,"List Clients");
             F1.ShowDialog();
 
         }
@@ -145,6 +156,22 @@ namespace PresentationLayer2_WindowsForm
         private void BTransactions_Click(object sender, EventArgs e)
         {
             Form F1   = new TransactionsForm();
+            F1.ShowDialog();
+        }
+
+        private void Bmanange_Click(object sender, EventArgs e)
+        {
+            Form F1 = new ManageUsersForm();
+            F1.ShowDialog();
+            _CurrentUser = clsUsersOperations.TryLogin(_CurrentUser.UserName ,  false);
+            Refreshform();
+
+        }
+
+        private void BLogs_Click(object sender, EventArgs e)
+        {
+         DataTable DT = clsUsersOperations.GetLogs();
+            Form F1 = new ListClient(DT, "Login Logs");
             F1.ShowDialog();
         }
     }
