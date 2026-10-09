@@ -20,8 +20,23 @@ namespace PresentationLayer2_WindowsForm
 
         
        public  void CheckPermissions ()
-        { 
-            if (_CurrentUser.Accessibilities != -1)
+        {
+            if (_CurrentUser.Accessibilities == -1) { 
+                    bListClient.Enabled = true;
+                BAddnew.Enabled = true;
+                BUpdate.Enabled = true;
+                Bdelete.Enabled = true;
+                BFind.Enabled = true;
+                BTransactions.Enabled = true;
+                Bmanange.Enabled = true;
+                BLogs.Enabled = true;  
+                Bcurrencies.Enabled = true;
+            }
+
+
+
+
+            else
             {
                 if ((_CurrentUser.Accessibilities & Convert.ToInt32(bListClient.Tag.ToString())) != Convert.ToInt32(bListClient.Tag.ToString()))
                 {
