@@ -139,7 +139,7 @@ namespace ConsolePresentationLayer
             CurrentUser =  Console.ReadLine();
 
             
-            clsUsersOperations User = clsUsersOperations.TryLogin(CurrentUser , false);
+            clsUsersOperations User = clsUsersOperations.TryLogin(CurrentUser ,false);
             clsMainScreen.CheckForErrors();
 
             if (User == null)

@@ -25,7 +25,7 @@ public static class clsAccesstoUsersData
 
         
        
-        public static bool CheckingLoginINDetails (string username  , ref stUserData Data, bool LoginIdicator , string password )
+        public static bool CheckingLoginINDetails (string username  , ref stUserData Data,bool LoginIndicator  , string password )
         {
             bool IsExists  = false;
             SqlConnection Connection = new SqlConnection(clsDataAccessStatics.ConnectionString);
@@ -34,7 +34,7 @@ public static class clsAccesstoUsersData
             SqlCommand Command = new SqlCommand (Query2, Connection);
             Command.Parameters.AddWithValue("@username", username);
 
-            if (LoginIdicator )
+            if (LoginIndicator)
             {
                
                 Command  = new SqlCommand (Query, Connection);

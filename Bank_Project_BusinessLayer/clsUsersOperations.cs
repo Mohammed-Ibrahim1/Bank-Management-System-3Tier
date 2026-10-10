@@ -95,10 +95,10 @@ namespace BankSystemBusinessLayer
             this.Password = password;
             Mode = enMode.Update;
         }
-        public static clsUsersOperations TryLogin(string username,bool LoginIdicator , string password = "")
+        public static clsUsersOperations TryLogin(string username,bool LoginIndicator ,string password ="")
         {
             clsAccesstoUsersData.stUserData UserData = new clsAccesstoUsersData.stUserData();
-            if (clsAccesstoUsersData.CheckingLoginINDetails(username,  ref UserData ,LoginIdicator , _Encription(password, 2)))
+            if (clsAccesstoUsersData.CheckingLoginINDetails(username,  ref UserData ,LoginIndicator , _Encription(password, 2)))
             {
                 return new clsUsersOperations(UserData.UserID, UserData.FirstName, UserData.LastName, UserData.Email, UserData.Phone
                     , UserData.UserName,_Decription( UserData.Password ,2), UserData.Accessibilities);
@@ -139,7 +139,7 @@ namespace BankSystemBusinessLayer
 
         bool _UpdateUser ()
         {
-            return clsAccesstoUsersData.UpdateUser(UserName, Password, FirstName, LastName, Email, Phone, Accessibilities);
+            return clsAccesstoUsersData.UpdateUser(UserName, _Encription(Password, 2), FirstName, LastName, Email, Phone, Accessibilities);
         }
         public bool Save ()
         {
