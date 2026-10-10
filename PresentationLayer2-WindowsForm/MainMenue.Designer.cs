@@ -81,6 +81,7 @@
             this.Bcurrencies.Tag = "256";
             this.Bcurrencies.Text = "Currencies";
             this.Bcurrencies.UseVisualStyleBackColor = true;
+            this.Bcurrencies.Click += new System.EventHandler(this.Bcurrencies_Click);
             // 
             // BLogs
             // 

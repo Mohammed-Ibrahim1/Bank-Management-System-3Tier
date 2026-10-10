@@ -189,5 +189,11 @@ namespace PresentationLayer2_WindowsForm
             Form F1 = new ListClient(DT, "Login Logs");
             F1.ShowDialog();
         }
+
+        private void Bcurrencies_Click(object sender, EventArgs e)
+        {
+            Form F1 = new CurrenciesMainForm();
+            F1.ShowDialog();
+        }
     }
 }

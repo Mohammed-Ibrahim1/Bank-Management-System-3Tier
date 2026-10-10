@@ -61,7 +61,7 @@ namespace BankSystemBusinessLayer
             return Dt;
 
         }
-        public static bool RateUpdate (string CurrencyCode ,  float NewRate)
+        public static bool RateUpdate (string CurrencyCode ,  double NewRate)
         {
             int NumberofRows = 0;
             SqlConnection Connection = new SqlConnection(clsDataAccessStatics.ConnectionString);

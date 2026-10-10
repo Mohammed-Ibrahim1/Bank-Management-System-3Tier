@@ -117,7 +117,7 @@ namespace PresentationLayer2_WindowsForm
         {
             switch (mode)
             {
-                case 1:
+                case 2:
                     {
                         double amount = Convert.ToDouble(maskedTextBox1.Text.ToString());
                         if (amount > Client1.Balance)
@@ -136,7 +136,7 @@ namespace PresentationLayer2_WindowsForm
 
                     }
 
-                case 2:
+                case 1:
                     {
                         double amount = Convert.ToDouble(maskedTextBox1.Text.ToString());
                         Client1.Balance += amount;

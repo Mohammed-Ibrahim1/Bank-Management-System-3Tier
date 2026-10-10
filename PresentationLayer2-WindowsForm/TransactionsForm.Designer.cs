@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BDesposit = new System.Windows.Forms.Button();
+            this.BDeposit = new System.Windows.Forms.Button();
             this.Bwithdraw = new System.Windows.Forms.Button();
             this.bTrans = new System.Windows.Forms.Button();
             this.Blog = new System.Windows.Forms.Button();
             this.Bmain = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // BDesposit
+            // BDeposit
             // 
-            this.BDesposit.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BDesposit.Location = new System.Drawing.Point(170, 240);
-            this.BDesposit.Name = "BDesposit";
-            this.BDesposit.Size = new System.Drawing.Size(1506, 83);
-            this.BDesposit.TabIndex = 0;
-            this.BDesposit.Text = "Desposit";
-            this.BDesposit.UseVisualStyleBackColor = true;
-            this.BDesposit.Click += new System.EventHandler(this.BDesposit_Click);
+            this.BDeposit.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BDeposit.Location = new System.Drawing.Point(170, 234);
+            this.BDeposit.Name = "BDeposit";
+            this.BDeposit.Size = new System.Drawing.Size(1506, 83);
+            this.BDeposit.TabIndex = 0;
+            this.BDeposit.Text = "Deposit";
+            this.BDeposit.UseVisualStyleBackColor = true;
+            this.BDeposit.Click += new System.EventHandler(this.BDesposit_Click);
             // 
             // Bwithdraw
             // 
@@ -99,11 +99,11 @@
             this.Controls.Add(this.Blog);
             this.Controls.Add(this.bTrans);
             this.Controls.Add(this.Bwithdraw);
-            this.Controls.Add(this.BDesposit);
+            this.Controls.Add(this.BDeposit);
             this.Name = "TransactionsForm";
             this.Text = "TransactionsForm";
             this.Load += new System.EventHandler(this.TransactionsForm_Load);
-            this.Controls.SetChildIndex(this.BDesposit, 0);
+            this.Controls.SetChildIndex(this.BDeposit, 0);
             this.Controls.SetChildIndex(this.Bwithdraw, 0);
             this.Controls.SetChildIndex(this.bTrans, 0);
             this.Controls.SetChildIndex(this.Blog, 0);
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BDesposit;
+        private System.Windows.Forms.Button BDeposit;
         private System.Windows.Forms.Button Bwithdraw;
         private System.Windows.Forms.Button bTrans;
         private System.Windows.Forms.Button Blog;

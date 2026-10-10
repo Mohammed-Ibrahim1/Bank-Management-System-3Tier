@@ -60,11 +60,29 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrenciesCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrenciesCalculator.Designer.cs">
+      <DependentUpon>CurrenciesCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrenciesMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrenciesMainForm.Designer.cs">
+      <DependentUpon>CurrenciesMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcuteUsersOperationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExcuteUsersOperationsForm.Designer.cs">
       <DependentUpon>ExcuteUsersOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindSetRateCurrencies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindSetRateCurrencies.Designer.cs">
+      <DependentUpon>FindSetRateCurrencies.cs</DependentUpon>
     </Compile>
     <Compile Include="ListClient.cs">
       <SubType>Form</SubType>
@@ -92,6 +110,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearhforCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearhforCurrency.Designer.cs">
+      <DependentUpon>SearhforCurrency.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerchingForCLientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +152,17 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CurrenciesCalculator.resx">
+      <DependentUpon>CurrenciesCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrenciesMainForm.resx">
+      <DependentUpon>CurrenciesMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcuteUsersOperationsForm.resx">
       <DependentUpon>ExcuteUsersOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindSetRateCurrencies.resx">
+      <DependentUpon>FindSetRateCurrencies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListClient.resx">
       <DependentUpon>ListClient.cs</DependentUpon>
@@ -152,6 +185,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearhforCurrency.resx">
+      <DependentUpon>SearhforCurrency.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SerchingForCLientForm.resx">
       <DependentUpon>SerchingForCLientForm.cs</DependentUpon>
     </EmbeddedResource>

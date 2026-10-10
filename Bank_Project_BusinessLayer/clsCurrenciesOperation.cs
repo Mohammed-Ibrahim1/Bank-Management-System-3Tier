@@ -23,7 +23,7 @@ namespace BankSystemBusinessLayer
             return clsAccesstoCurrenciesData.GetAllCurrencies ();
         }
 
-        public static bool UpdateRate (string code  ,  float rate)
+        public static bool UpdateRate (string code  ,  double rate)
         {
             return clsAccesstoCurrenciesData.RateUpdate(code, rate);
 
